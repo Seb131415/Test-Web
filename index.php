@@ -1,19 +1,6 @@
 <?php
 
 require_once $_SERVER['DOCUMENT_ROOT'].'/Test-Web/resource/init.php';
-
-$con = new config();
-$con->con();
-
-if (isset($_GET['delete'])) {
-    $id = $_GET['delete'];
-    $delete = new delete($id);
-    if ($delete->deleteTask()) {
-        echo "<div class='alert alert-success'>Task deleted successfully.</div>";
-    } else {
-        echo "<div class='alert alert-danger'>Failed to delete the task.</div>";
-    }
-}
 ?>
 
 
@@ -29,10 +16,7 @@ if (isset($_GET['delete'])) {
   </head>
   <body>
     <div class="container mt-5"> 
-    <?php 
-    $view = new view();
-    $view->viewData();
-    ?>
+    <?php  require_once('viewdatatable.php'); ?>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

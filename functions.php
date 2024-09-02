@@ -23,4 +23,16 @@ function viewTable() {
     $view->viewData();
 }
 
+function deleteListener(){
+        if (isset($_GET['delete'])) {
+        $id = $_GET['delete'];
+        $delete = new delete($id);
+        if ($delete->deleteTask()) {
+            echo "<div class='alert alert-success'>Task deleted successfully.</div>";
+        } else {
+            echo "<div class='alert alert-danger'>Failed to delete the task.</div>";
+        }
+    }
+}
+
 ?>

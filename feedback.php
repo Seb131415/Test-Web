@@ -16,7 +16,6 @@ if(!empty($_GET)){
   </head>
   <body>
     <h1>Feedback</h1>
-    <a href= 'index.php'>Go to View Feedback</a>
     <div class="container mt-5">
     <form action="" method="GET">
       <div class="row">
@@ -40,6 +39,7 @@ if(!empty($_GET)){
       </div>
      
         <button type="submit" class="col-md-1 mt-3 btn btn-primary">Submit</button>
+        <a href="index.php" class="col mt-3 btn btn-primary">Go to View Feedback</a>
       </form>
     
 </div>
